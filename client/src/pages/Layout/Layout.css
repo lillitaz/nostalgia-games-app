@@ -10,6 +10,11 @@
     font-size: 1.5rem;
     font-weight: bold;
   }
+  .nav{
+    font-size:3rem;
+    text-decoration: none;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
   
   .Layout nav button {
     font-family: 'Courier New', Courier, monospace;
