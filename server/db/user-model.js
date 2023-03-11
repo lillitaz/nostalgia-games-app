@@ -11,6 +11,12 @@ const UserSchema = new Schema({
         default: Date.now,
     },
     games: [{
+        title: String,
+        year: Number,
+        company: String,
+        developer: String,
+        embeddedLink: String,
+        image: String
     }]
 });
 

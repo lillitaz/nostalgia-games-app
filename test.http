@@ -1,0 +1,42 @@
+GET http://localhost:5000/api/users/
+
+###
+GET http://localhost:5000/api/user/640c8fa21a69eb26cab841a3
+
+###
+GET http://localhost:5000/api/user/640c8fa21a69eb26cab841a3/games
+
+###
+GET http://localhost:5000/api/user/640c8fa21a69eb26cab841a3/game/String
+
+###
+POST http://localhost:5000/api/create/user
+Content-Type: application/json
+
+{
+  "username": "Test",
+  "email": "test@email.com",
+  "password": "1234",
+    "games": {
+        "title": "String",
+        "year": 2023,
+        "company": "String",
+        "developer": "String",
+        "embeddedLink": "String",
+        "image": "String"
+    }
+}
+
+###
+DELETE http://localhost:5000/api/user/640c871b1d2870cd63748ef1
+
+###
+DELETE http://localhost:5000/api/user/640c8fa21a69eb26cab841a3/game/String
+
+###
+PATCH http://localhost:5000/api/user/640c8558a784193d25e1eae4
+Content-Type:  application/json
+
+{
+  "password": "asdf"
+}
