@@ -1,11 +1,30 @@
-function Account() {
-    return (
-      <div className="account">
-            <header className="account-header">
-            <iframe title="Embedded Game" src="https://archive.org/embed/msdos_Tetris_1986" width="560" height="384"></iframe>
-        </header>
-      </div>
-    );
-}
+import { useEffect, useState } from "react";
+import EmbeddedGame from "../components/EmbeddedGame";
+import Loading from "../components/Loading";
+
+const fetchGame = () => {
+    return fetch("/api/users").then((res) => res.json());
+};
+  
+const Account = () => {
+    const [loading, setLoading] = useState(false);
+    const [game, setGame] = useState(null);
+    const [src, setSource] = useState(null);
+
+    useEffect(() => {
+        fetchGame()
+            .then((game) => {
+                setLoading(false);
+                setGame(game);
+                setSource(src);
+            })
+    }, [game, src]);
+    
+    if (loading) {
+        return <Loading />;
+    }
+    
+    return <EmbeddedGame></EmbeddedGame>
+};
   
 export default Account;
