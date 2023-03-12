@@ -10,7 +10,7 @@ const SearchResults = ({ searchResults }) => (
         <a href={result.identifier}>View item</a>
       </div>
     ))}
-  </div>
+      </div>
 );
 
 export default SearchResults;

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import EmbeddedGame from "../components/EmbeddedGame";
 import Loading from "../components/Loading";
+import LoginForm from "../components/FormLogin";
 
 const identifier = "eat_it_20";
 
@@ -8,8 +9,6 @@ const fetchGame = async () => {
   try {
     const response = await fetch(`https://archive.org/metadata/${identifier}`);
       const data = await response.json();
-      console.log(data)
-
       return data;
   } catch (error) {
     console.error(error);
@@ -34,6 +33,7 @@ const Account = () => {
 
   return (
     <>
+      <LoginForm></LoginForm>
       <EmbeddedGame gameData={gameData} />
     </>
   );

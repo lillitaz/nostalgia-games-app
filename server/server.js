@@ -1,4 +1,5 @@
 require("dotenv").config();
+const cors = require('cors');
 const express = require("express");
 const mongoose = require("mongoose");
 const User = require("./db/user-model");
@@ -10,8 +11,10 @@ if (!MONGO_URL) {
   process.exit(1);
 }
 
+
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 //GETS (all, one, stored games by user id, stored game by user id and game title)
 
@@ -60,8 +63,8 @@ app.post("/api/create/user", async (req, res, next) => {
 });
 
 app.post("/api/user/login", (req, res) => {
-    const { userName, password } = req.body;
-    User.findOne({ userName, password })
+    const { username, password } = req.body;
+    User.findOne({ username, password })
         .then((user) => {
             if (user) {
                 res.json({ success: true });

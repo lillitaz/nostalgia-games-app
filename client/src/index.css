@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: rgba(187, 185, 207, 0.616);
   font-family:'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
