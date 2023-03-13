@@ -9,6 +9,7 @@ import ErrorPage from './pages/ErrorPage';
 import "./index.css"
 import Account from './pages/Account';
 import About from './pages/About';
+import RegistrationPage from './pages/RegistrtionPage';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About />,
       },
+      {
+        path: "/register",
+        element: <RegistrationPage />,
+      }
     ],
   },
 ]);

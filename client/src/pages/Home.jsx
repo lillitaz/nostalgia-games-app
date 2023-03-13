@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import RegisterForm from "../components/FormRegister";
 import Loading from "../components/Loading";
 import SearchResults from "../components/SearchResults";
 import SearchBar from "../components/Bar:Search";
@@ -43,10 +42,9 @@ function Home() {
 
   return (
     <>
-      <RegisterForm />
-      <LoginForm></LoginForm>
       <SearchBar handleSearchInput={handleSearchInput} />
       <SearchResults searchResults={results} />
+      <LoginForm></LoginForm>
     </>
   );
 }

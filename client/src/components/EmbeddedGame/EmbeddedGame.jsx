@@ -1,4 +1,3 @@
-import "./EmbeddedGame.css";
 import React from "react";
 
 const EmbeddedGame = ({ gameData }) => (

@@ -1,28 +1,9 @@
-import { Outlet, Link } from "react-router-dom";
-
-import "./Layout.css";
+import { Outlet } from "react-router-dom";
+import Navbar from "../../components/Navbar";
 
 const Layout = () => (
     <div className="Layout">
-        <nav>
-            <ul>
-                <li className="nav">
-                    <Link to="/">
-                        <>Nostalgia Games App</>
-                    </Link>
-                </li> 
-                <li>
-                    <Link to="/account">
-                        <button type="button">Your Account</button>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/about">
-                        <button type="button">About</button>
-                    </Link>
-                </li>
-            </ul>
-        </nav>
+        <Navbar></Navbar>
         <Outlet />
     </div>
 );
