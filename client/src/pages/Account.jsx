@@ -33,6 +33,8 @@ const Account = () => {
           const response = await fetch(apiUrl);
           const data = await response.json();
           setSearchResults(data.response.docs);
+          console.log(data.response.docs)
+
         } catch (error) {
           console.error(error);
         } finally {
@@ -56,7 +58,7 @@ const Account = () => {
     
       fetchGame().then((data) => {
           setLoading(false)
-          setGameData(data);
+        setGameData(data);
       });
   }, []);
   

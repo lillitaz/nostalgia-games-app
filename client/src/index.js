@@ -6,7 +6,9 @@ import Layout from './pages/Layout';
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 
-import "./index.css"
+import "./index.css";
+import 'flowbite/dist/flowbite.css';
+import 'flowbite/dist/flowbite.js';
 import Account from './pages/Account';
 import About from './pages/About';
 import RegistrationPage from './pages/RegistrtionPage';
